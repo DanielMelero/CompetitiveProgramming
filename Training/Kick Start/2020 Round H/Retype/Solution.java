@@ -16,12 +16,10 @@ public class Solution {
 
 	public void solve(int c, Scanner in) {
 		int n = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
-		
-		/**
-		 * Solve Problem Here.
-		 */
+		int k = in.nextInt();
+		int s = in.nextInt();
 
-		this.print(c, n);
+		this.print(c, k+Math.min(n, 2*(k-s) + (n-k)));
 	}
 
 	private void print(int c, String res) {
