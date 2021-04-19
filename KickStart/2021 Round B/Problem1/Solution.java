@@ -15,13 +15,18 @@ public class Solution {
 	}
 
 	public void solve(int c, Scanner in) {
-		int n = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
-		
-		/**
-		 * Solve Problem Here.
-		 */
-
-		this.print(c, n);
+		int length = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
+		byte[] bytes = in.next().getBytes();
+		String res = "";
+		int ant = 0;
+		byte pre = 0;
+		for (byte b : bytes) {
+			if (b > pre) ant++;
+			else ant = 1;
+			pre = b;
+			res += ant + " ";
+		}
+		this.print(c, res);
 	}
 
 	private void print(int c, String res) {
