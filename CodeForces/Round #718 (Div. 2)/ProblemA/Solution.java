@@ -10,18 +10,25 @@ public class Solution {
 		int cases = in.nextInt();
 		Solution solution = new Solution();
 		for (int i = 1; i <= cases; ++i) {
-			System.out.print("Case #" + i + ": ");
 			solution.solve(in);
 		}
 	}
 
 	public void solve(Scanner in) {
-		int n = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
-		
-		/**
-		 * Solve Problem Here.
-		 */
+		long n = in.nextLong(); // Scanner has functions to read ints, longs, strings, chars, etc.
+		long div = Long.parseLong("2050000000000000000");
+		int count = -1;
+		while (div >= 2050) {
+			if (n-div >= 0) {
+				n -= div;
+				if (count == -1) count = 1;
+				else count++;
+			} else {
+				div /= 10;
+			}
+		}
+		if (n > 0) count = -1;
 
-		System.out.println(n);
+		System.out.println(count);
 	}
 }

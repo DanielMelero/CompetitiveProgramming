@@ -9,18 +9,15 @@ public class Solution {
 		Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
 		int cases = in.nextInt();
 		Solution solution = new Solution();
-		for (int i = 1; i <= cases; ++i) {
-			System.out.print("Case #" + i + ": ");
-			solution.solve(in);
-		}
+		solution.solve(in);
 	}
 
 	public void solve(Scanner in) {
 		int n = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
+		int[] array = new int[n];
+		for (int i = 0; i < n; i++) array[i] = in.nextInt();
 		
-		/**
-		 * Solve Problem Here.
-		 */
+		
 
 		System.out.println(n);
 	}
